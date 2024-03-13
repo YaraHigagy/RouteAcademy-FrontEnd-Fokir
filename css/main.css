@@ -1,0 +1,549 @@
+/* Start hero-sec */
+.hero-sec {
+    background-image: url("../images/hero-img.jpg");
+    background-color: #F1F1F1;
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    z-index: 0;
+}
+
+.hero-sec .dark-screen {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: -1;
+}
+
+.hero-sec .container {
+    position: relative;
+    height: 100%;
+}
+
+.hero-sec .container .hero-content{
+    position: absolute;
+    height: 30%;
+    inset: 0;
+    margin: auto;
+}
+
+.hero-sec .container .hero-content .hero-text-fixed {
+    font-size: 22px;
+}
+
+.hero-sec .container .hero-content h1 {
+    font-size: 60px;
+    font-weight: bolder;
+    padding: 24px 0;
+}
+
+.hero-sec .container .hero-content .hero-text-move {
+    font-size: 24px;
+    font-weight: lighter;
+}
+
+.hero-sec .container .hero-content .hero-text-move .text-move-1{
+    width: fit-content;
+    margin: auto;
+    border-right: 1px solid;
+    text-wrap: nowrap;
+    overflow: hidden;
+}
+
+.hero-sec .hero-content .hero-text-move .text-move-1 p{
+    padding: 0;
+    animation: hero_text_move 3s infinite;
+}
+
+.hero-sec .container .hero-content .hero-text-move .text-move-2{
+    width: fit-content;
+    margin: auto;
+    border-right: 3px solid;
+    text-wrap: nowrap;
+    overflow: hidden;
+    animation: hero_text_move_div 3s infinite;
+}
+
+.hero-sec .hero-content .hero-text-move .text-move-2 p{
+    padding: 0;
+    animation: hero_text_move_p 3s infinite;
+}
+
+.hero-sec .hero-content .hero-text-move p span:after {
+    content: '';
+    width: 100px;
+    padding-right: 10px;
+    animation: hero_text_change 6s infinite;
+}
+
+@keyframes hero_text_change {
+    0% {
+        content: 'Developer ';
+    }
+    50% {
+        content: 'Designer! ';
+    }
+    100% {
+        content: 'Developer ';
+    }
+}
+
+@keyframes hero_text_move {
+    0% {
+        width: 300px;
+    }
+    50% {
+        width: 187px;
+    }
+    100% {
+        width: 300px;
+    }
+}
+
+@keyframes hero_text_move_div {
+    0% {
+        transform: translatex(0);
+    }
+    50% {
+        transform: translatex(-65px);
+    }
+    100% {
+        transform: translatex(0);
+    }
+}
+
+@keyframes hero_text_move_p {
+    0% {
+        transform: translatex(0);
+    }
+    50% {
+        transform: translatex(120px);
+    }
+    100% {
+        transform: translatex(0);
+    }
+}
+/* End hero-sec */
+    
+/* Start Header */
+.nav-sec {
+    background-color: #333;
+    position: fixed;
+    padding: 16px 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    transition: 0.5s;
+}
+
+.hero-sec:hover + header .nav-sec{
+    background-color: transparent;
+}
+
+.nav-sec nav .head-logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav-sec nav .head-content {
+    width: 48%;
+    line-height: 1.8;
+}
+
+.nav-sec nav .head-content ul li {
+    padding-left: 4%;
+}
+
+.nav-sec nav .head-content ul li:not(:first-child) a{
+    color: #fff;
+    transition: 0.5s;
+}
+
+.nav-sec nav .head-content ul li:not(:first-child):hover a{
+    color: #FF305B;
+}
+/* End Header */
+
+/* Start Main */
+/* Start about */
+.about .about-img {
+    width: 40%;
+}
+
+.about .about-img>div {
+    border: 8px solid;
+    margin: 0 8px;
+}
+
+.about .about-img>div>div {
+    position: relative;
+    top: 20px;
+    left: 20px;
+    overflow: hidden;
+}
+
+.about .about-img>div>div .social-contact {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.5);
+    inset: 0;
+    transform: translate(0, 100%);
+    transition: 0.4s ease-out;
+}
+
+.about .about-img>div>div .social-contact div {
+    position: absolute;
+    inset: 0;
+    width: fit-content;
+    height: fit-content;
+    margin: auto;
+}
+
+.about .about-img>div>div:hover .social-contact {
+    transform: translate(0, 0);
+}
+
+.about .about-text {
+    width: 60%;
+    padding-left: 80px;
+    text-align: start;
+}
+
+.about .about-text>.has-h2 {
+    position: relative;
+    margin-bottom: 24px;
+}
+
+.about .about-text>.has-h2::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0 auto;
+    border-bottom: 1px dashed ;
+}
+
+.about .about-text>div h2 {
+    position: relative;
+    padding: 0 0 0 16px;
+    margin-bottom: 0;
+}
+
+.about .about-text>div h2::before {
+    content: '';
+    position: absolute;
+    height: 25px;
+    inset: 0;
+    margin: auto;
+    border-left: 4px solid #FF305B;
+}
+
+
+.about .about-text>div ul li{
+    width: 40%;
+    margin-bottom: 24px;
+}
+
+.about .about-text div button {
+    font-size: 16px;
+    padding: 14px 28px;
+    margin: 0 4px;
+    border-radius: 4px;
+    transition: all 0.3s;
+}
+
+.about .about-text div button:hover {
+    cursor: pointer;
+    background-color: #ff2800;
+}
+/* End about */
+
+/* Start services */
+.services h3 {
+    margin: 24px 0 0 0;
+}
+
+.services .float-left i,
+.services .float-left {
+    transition: 0.5s;
+}
+
+.services .float-left:hover {
+    background-color: #fff;
+    filter: drop-shadow(0 0 10px #ccc);
+}
+
+.services .float-left:hover i {
+    transform: scale(1.4, 1.4);
+}
+/* End services */
+
+/* Start portofolio */
+.portofolio div ul {
+    width: 31%;
+    margin: 0 auto 40px;
+    text-align: center;
+
+}
+
+.portofolio div ul li {
+    padding: 0 10px;
+}
+
+.portofolio div ul li:not(:first-child) a{
+    color: #333;
+}
+
+.portofolio .imgs-group div {
+    width: 33.33%;
+    padding: 16px;
+    position: relative;
+}
+
+.portofolio .imgs-group div>div {
+    position: absolute;
+    background-color: transparent;
+    inset: 0;
+    width: calc(100% - 32px);
+    height: calc(100% - 32px);
+    margin: auto;
+    transition: 0.3s;
+
+}
+
+.portofolio .imgs-group div i {
+    position: absolute;
+    bottom: 32px;
+    right: 20px;
+    opacity: 0;
+    transition: 1s;
+}
+
+.portofolio .imgs-group div:hover div{
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.portofolio .imgs-group div:hover i{
+    opacity: 1;
+}
+
+/* End portofolio */
+
+/* Start testimonial */
+.testimonial h3 {
+    font-size: 26px;
+    margin: 20px 0;
+}
+
+.testimonial h5 {
+    font-size: 14px;
+}
+
+.testimonial h3::after {
+    content: counter(count);
+    animation: counter 1s;
+    counter-reset: count 0;
+}
+
+@keyframes counter {
+0% {
+    counter-increment: count 0;
+}
+10% {
+    counter-increment: count 1;
+}
+20% {
+    counter-increment: count 2;
+}
+30% {
+    counter-increment: count 3;
+}
+40% {
+    counter-increment: count 4;
+}
+50% {
+    counter-increment: count 5;
+}
+60% {
+    counter-increment: count 6;
+}
+70% {
+    counter-increment: count 7;
+}
+80% {
+    counter-increment: count 8;
+}
+90% {
+    counter-increment: count 9;
+}
+100% {
+    counter-increment: count 10;
+}
+}
+/* End testimonial */
+
+/* Start feedback */
+.feedback .container>div>div {
+    margin: auto;
+}
+
+.feedback .container>div .bg-light-gray {
+    padding: 40px;
+    text-align: start;
+    position: relative;
+    z-index: 0;
+    overflow: auto;
+}
+
+.feedback .container>div .bg-light-gray::after {
+    content: '';
+    background-color: #FF305B;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 25%;
+    height: 70%;
+    clip-path: polygon(0 0, 0% 100%, 100% 0%);
+    z-index: -1;
+}
+
+.feedback .container>div .bg-light-gray .float-left {
+    width: 16%;
+    padding: 16px 0;
+}
+
+.feedback .container>div .bg-light-gray .float-right {
+    width: 80%;
+    padding-left: 4%;
+}
+
+.feedback .container>div .bg-light-gray .float-right * {
+    margin-bottom: 10px;
+}
+
+.feedback .container>div .bg-light-gray img {
+    border-radius: 50%;
+}
+
+.feedback .container>div button {
+    background-color: transparent;
+    width: 10px;
+    height: 10px;
+    padding: 0;
+    margin: 6px 3px;
+    border: 1px solid #FF305B;
+    border-radius: 5px;
+    transition: 0.15s;
+}
+
+.feedback .container>div button:hover {
+    cursor: pointer;
+    background-color: #FF305B;
+    padding: 0 12px;
+}
+/* End feedback */
+
+/* Start blog */
+.blog .container>div>div {
+    width: 33.33%;
+    padding: 0 15px;
+}
+
+.blog .container>div>div>div {
+    padding: 20px;
+    text-align: start;
+}
+
+.blog .container .bg-white * {
+    margin-bottom: 15px;
+}
+
+.blog .container p {
+    line-height: 1.5;
+    font-size: 16px;
+}
+
+.blog .container>div>div a {
+    transition: 0.4s;
+}
+
+.blog .container>div>div a:hover {
+    color: #FF305B;
+}
+/* End blog */
+
+/* Start contact */
+.contact .container>div>div {
+    margin: auto;
+    text-align: start;
+}
+
+.contact form>div textarea,
+.contact form div input:not(:last-child) {
+    font-size: 14px;
+    padding: 10px;
+    margin-bottom: 8px;
+    border: 1px solid #999;
+}
+
+.contact form>div textarea {
+    resize: vertical;
+}
+
+.contact form div small {
+    font-size: 16px;
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.contact form div>textarea:hover,
+.contact form div>input:hover:not(:last-child) {
+    border: 2px solid #A94442;
+    box-shadow: 0 0 3px #A94442;
+}
+
+.contact form div>textarea:focus,
+.contact form div>input:focus:not(:last-child) {
+    border: 2px solid #FF305B;
+    outline: none;
+}
+
+.contact form div>textarea:invalid:not(:placeholder-shown),
+.contact form div>input:invalid:not(:placeholder-shown):not(:last-child) {
+    border: 2px solid #A94442;
+}
+
+.contact form div>textarea:hover + small,
+.contact form div>input:hover + small {
+    opacity: 1;
+}
+
+.contact form #submit {
+    padding: 14px 20px;
+    transition: all 0.3s;
+}
+
+.contact form #submit:hover {
+    cursor: pointer;
+    background-color: #ff2800;
+}
+
+.contact form #submit:focus {
+    padding: 12px 18px;
+}
+/* End contact */
+/* End Main */
+
+/* Start Footer */
+footer .container{
+    padding: 50px 0;
+}
+
+footer .container p a:hover {
+    text-decoration: underline;
+}
+/* End Footer */
